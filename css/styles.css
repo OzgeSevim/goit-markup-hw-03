@@ -2,16 +2,24 @@ body {
     font-family: "Roboto", sans-serif;
     color: #434455;
     background-color: #FFFFFF;
-    box-sizing: border-box;
 }
-h1,h2,h3,h4,h5,h6,p,ul {
-    list-style-type: none;
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 .container{
     width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header-div{
+    display: flex;
 }
 
 
@@ -21,14 +29,12 @@ img{
 
 .header{
     border: 1px solid #e7e9fc;
-    display: flex;
 }
 
 .nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 1440px;
 }
 
 .nav-logo {
@@ -39,8 +45,8 @@ img{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
-    margin-right:76px ;
     text-decoration: none;
+    margin-right: 76px;
 }
 
 .nav-logo-span {
@@ -65,7 +71,7 @@ img{
 
 .nav-list-link {
     color: #2E2F42;
-    text-decoration: none;
+    padding: 24px 0;
 }
 
 .nav-list-link:hover,
@@ -75,7 +81,8 @@ img{
 
 .address {
     font-style: normal;
-    margin-left: 332px;
+    display: flex;
+    margin-left: auto;
 }
 
 .address-list-link {
@@ -111,8 +118,7 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 1440px;
-    height: 600px;
+    padding: 188px 0;
 }
 
 .first-section-title {
@@ -122,7 +128,6 @@ img{
     color: #ffffff;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-top: 188px;
 }
 
 .first-section-button {
@@ -134,13 +139,29 @@ img{
     cursor: pointer;
     letter-spacing: 0.04em;
     border-radius: 4px;
-    margin-top: 48px;
-    margin-bottom: 188px;
+    min-width: 169px;
+    height: 56px;
+    display: block;
+    margin: 0 auto;
+    border: none;
 }
 
 .first-section-button:hover,
 .first-section-button:focus {
     background-color: #404BBF;
+}
+
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 .second-section{
@@ -149,10 +170,12 @@ img{
 
 .second-section-ul{
     display: flex;
-    flex-direction: row;
-  
-    margin-left: 156px;
     gap: 24px;
+}
+
+.second-section-list{
+    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
 }
 
 .second-section-list-title {
@@ -161,6 +184,7 @@ img{
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .second-section-list-text {
@@ -172,24 +196,24 @@ img{
 
 .third-section {
     background-color: #F4F4FD;
-    height: 732px;
-    width: 1440px;
     padding: 120px 0;
 }
 
 .third-section-ul{
     display: flex;
-    flex-direction: row;
     gap: 24px;
- 
-    margin-left: 156px;
-    margin-bottom: 120px;
 }
+
 
 .third-section-list {
     background-color: #FFFFFF;
-    width: 264px;
-    height: 380px;
+    width: calc((100% - 72px) / 4);
+    flex-basis: calc((100% - 72px) / 4);
+    border-radius: 0px 0px 4px 4px;
+}
+
+.third-section-div{
+    padding: 32px 0;
 }
 
 .third-section-title {
@@ -200,7 +224,7 @@ img{
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    padding-bottom: 72px;
+    margin-bottom:72px;
 
 }
 
@@ -231,7 +255,6 @@ img{
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    margin-left: 156px;
 }
 
 .fourth-section-title {
@@ -242,11 +265,21 @@ img{
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
-    padding-bottom: 72px;
+    margin-bottom: 72px;
 }
 
 .third-section-img {
     background-color: #FFFFFF;
+}
+
+.fourth-section-list{
+    width: calc((100% - 72px) / 4);
+}
+
+.fourth-section-div{
+    padding: 32px 16px;
+    border: 1px solid #e7e9fc;
+    border-top: none;
 }
 
 .fourth-section-list-title {
@@ -255,6 +288,7 @@ img{
     line-height: 1.2;
     color: #2E2F42;
     letter-spacing: 0.02em;
+    margin-bottom: 8px;
 }
 
 .fourth-section-list-text {
@@ -266,10 +300,7 @@ img{
 
 .footer {
     background-color: #2E2F42;
-    height: 312px;
-    width: 1440px;
-    padding-top: 100px;
-    padding-left: 156px;
+    padding: 100px 0;
 }
 
 .footer-logo {
@@ -281,6 +312,8 @@ img{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-decoration: none;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo-span {
@@ -299,7 +332,5 @@ img{
     line-height: 1.5;
     color: #F4F4FD;
     letter-spacing: 0.02em;
-    margin-top: 16px;
-    width: 264px;
-    height: 72px;
+    max-width: 264px;
 }
